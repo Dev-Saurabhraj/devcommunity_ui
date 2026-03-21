@@ -24,5 +24,5 @@ static String tennis = 'assets/icons/tennis.svg';
 static String vienCharts = 'assets/icons/viencharts.svg';
 static String voice = 'assets/icons/voice.svg';
 static String weixinMarket = 'assets/icons/weixin-market.svg';
-
+static String checkSmall = 'assets/icons/check-small.svg';
 }
