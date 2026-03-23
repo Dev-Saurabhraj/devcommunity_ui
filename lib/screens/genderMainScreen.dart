@@ -65,14 +65,15 @@ class GenderMainScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 30),
             Expanded(
-              child: screens[1],
+              child: screens[0],
             ),
-            SizedBox(height: MediaQuery.of(context).size.height / 4),
             GlobalButton(onPressed: (){
 
             }, label: "Continue"),
+            SizedBox(
+              height: 50,
+            )
           ],
         ),
       ),
