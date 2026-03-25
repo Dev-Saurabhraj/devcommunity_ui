@@ -1,5 +1,9 @@
+import 'package:devcommunity/screens/bloc/signup/signUpBloc.dart';
+import 'package:devcommunity/screens/bloc/signup/signUpEvent.dart';
+import 'package:devcommunity/screens/bloc/signup/signupState.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../utils/colors.dart';
@@ -11,27 +15,32 @@ class ChooseGender extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: .start,
-      children: [
-        Text(
-          "I am a ",
-          style: GoogleFonts.inter(
-            textStyle: DVTextDecoration.displayMedium,
-          ),
-        ),
-        SizedBox(height: 30),
-        _genderBox('Man', true),
-        _genderBox('Woman', false),
-        _genderBox('Other', false),
-      ],
+    return BlocBuilder<SignUpBloc, GenderState>(
+      builder: (context, state) {
+        return Column(
+          crossAxisAlignment: .start,
+          children: [
+            Text(
+              "I am a ",
+              style: GoogleFonts.inter(
+                textStyle: DVTextDecoration.displayMedium,
+              ),
+            ),
+            SizedBox(height: 30),
+            _genderBox( context, 'Man',  state),
+            _genderBox(context , 'Woman',  state),
+            _genderBox(context, 'Other',  state),
+          ],
+        );
+      }
     );
   }
 }
 
 
 
-Widget _genderBox(String title, bool isSelected) {
+Widget _genderBox(BuildContext context , String title, GenderState state) {
+ bool isSelected = state.selectedGender == title;
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
     child: Container(
@@ -62,6 +71,7 @@ Widget _genderBox(String title, bool isSelected) {
         splashColor: DVColor.white,
         onTap: () {
           HapticFeedback.lightImpact();
+          context.read<SignUpBloc>().add(SelectGender(title));
         },
         child: Center(
           child: Padding(
