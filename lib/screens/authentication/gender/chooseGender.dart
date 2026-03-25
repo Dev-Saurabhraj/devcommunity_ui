@@ -1,14 +1,15 @@
-import 'package:devcommunity/screens/bloc/signup/signUpBloc.dart';
-import 'package:devcommunity/screens/bloc/signup/signUpEvent.dart';
-import 'package:devcommunity/screens/bloc/signup/signupState.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../utils/colors.dart';
-import '../../utils/icons.dart';
-import '../../utils/textStyle.dart';
+
+import '../../../utils/colors.dart';
+import '../../../utils/icons.dart';
+import '../../../utils/textStyle.dart';
+import '../bloc/signup/signUpBloc.dart';
+import '../bloc/signup/signUpEvent.dart';
+import '../bloc/signup/signupState.dart';
 
 class ChooseGender extends StatelessWidget{
   const ChooseGender({super.key});

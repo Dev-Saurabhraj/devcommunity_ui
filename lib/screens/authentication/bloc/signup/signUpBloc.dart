@@ -1,5 +1,6 @@
-import 'package:devcommunity/screens/bloc/signup/signUpEvent.dart';
-import 'package:devcommunity/screens/bloc/signup/signupState.dart';
+
+import 'package:devcommunity/screens/authentication/bloc/signup/signUpEvent.dart';
+import 'package:devcommunity/screens/authentication/bloc/signup/signupState.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpBloc extends Bloc<SignUpEvent, GenderState>{

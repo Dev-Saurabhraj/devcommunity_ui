@@ -1,6 +1,3 @@
-import 'package:devcommunity/screens/bloc/signup/signUpBloc.dart';
-import 'package:devcommunity/screens/bloc/signup/signUpEvent.dart';
-import 'package:devcommunity/screens/bloc/signup/signupState.dart';
 import 'package:devcommunity/utils/colors.dart';
 import 'package:devcommunity/utils/fieldOfInterestList.dart';
 import 'package:devcommunity/utils/textStyle.dart';
@@ -8,7 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../utils/icons.dart';
+import '../../../utils/icons.dart';
+import '../bloc/signup/signUpBloc.dart';
+import '../bloc/signup/signUpEvent.dart';
+import '../bloc/signup/signupState.dart';
 
 List<InterestModel> fieldOfInterests = [
   InterestModel(

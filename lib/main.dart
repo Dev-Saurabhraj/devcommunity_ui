@@ -1,6 +1,5 @@
 import 'package:devcommunity/router/goRouter.dart';
 import 'package:flutter/material.dart';
-import 'authentication/loginScreen.dart';
 
 void main() {
   runApp(const MyApp());

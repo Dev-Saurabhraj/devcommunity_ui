@@ -1,7 +1,3 @@
-import 'package:devcommunity/screens/bloc/signup/signUpBloc.dart';
-import 'package:devcommunity/screens/bloc/signup/signUpEvent.dart';
-import 'package:devcommunity/screens/gender/chooseGender.dart';
-import 'package:devcommunity/screens/interestScreen/chooseInterestScreen.dart';
 import 'package:devcommunity/utils/colors.dart';
 import 'package:devcommunity/utils/globalButton.dart';
 import 'package:devcommunity/utils/icons.dart';
@@ -11,7 +7,12 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'bloc/signup/signUpBloc.dart';
+import 'bloc/signup/signUpEvent.dart';
 import 'bloc/signup/signupState.dart';
+import 'gender/chooseGender.dart';
+import 'interestScreen/chooseInterestScreen.dart';
 
 class GenderMainScreen extends StatelessWidget {
   const GenderMainScreen({super.key});
