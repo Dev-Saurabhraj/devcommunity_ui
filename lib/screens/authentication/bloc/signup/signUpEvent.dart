@@ -12,6 +12,8 @@ class MoveToNextPageEvent extends SignUpEvent{
 class BackToLastPageEvent extends SignUpEvent{
 }
 
+
+
 class SelectInterestEvent extends SignUpEvent{
   final String selectedInterest;
   SelectInterestEvent(this.selectedInterest);
