@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'bloc/signup/signUpBloc.dart';
@@ -84,6 +85,9 @@ class GenderMainScreen extends StatelessWidget {
                     onPressed: () {
                       if (state.count < screens.length-1) {
                         context.read<SignUpBloc>().add(MoveToNextPageEvent());
+                      }
+                      if(state.count == screens.length - 1){
+                       GoRouter.of(context).pushNamed('mainFeedScreen');
                       }
                     },
                     label: "Continue",
