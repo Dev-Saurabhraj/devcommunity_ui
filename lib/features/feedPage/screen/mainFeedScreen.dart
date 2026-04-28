@@ -1,5 +1,3 @@
-import 'package:devcommunity/screens/feedPage/component/feedIconButton.dart';
-import 'package:devcommunity/screens/feedPage/component/feedProfileCard.dart';
 import 'package:devcommunity/utils/icons.dart';
 import 'package:devcommunity/utils/textStyle.dart';
 import 'package:flutter/material.dart';
@@ -9,6 +7,8 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../utils/colors.dart';
+import '../component/feedIconButton.dart';
+import '../component/feedProfileCard.dart';
 
 class MainFeedScreen extends StatelessWidget {
   const MainFeedScreen({super.key});
