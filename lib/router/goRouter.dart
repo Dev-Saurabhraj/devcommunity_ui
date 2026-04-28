@@ -1,9 +1,10 @@
 
+import 'package:devcommunity/features/homeScreenWrapper/homeScreenWrapper.dart';
 import 'package:devcommunity/router/routerConstant.dart';
-import 'package:devcommunity/screens/feedPage/screen/mainFeedScreen.dart';
 import 'package:go_router/go_router.dart';
-import '../screens/authentication/loginScreen.dart';
-import '../screens/authentication/genderMainScreen.dart';
+import '../features/authentication/genderMainScreen.dart';
+import '../features/authentication/loginScreen.dart';
+import '../features/feedPage/screen/mainFeedScreen.dart';
 
 class GoRouterPath {
   static final GoRouter goRouter = GoRouter(
@@ -26,6 +27,13 @@ class GoRouterPath {
       builder: (context, state){
         return MainFeedScreen();
       }
+      ),
+      GoRoute(path: '/homeScreenWrapper',
+      name: RouterConstant.homeScreenWrapper,
+        builder: (context, state){
+        return HomeScreenWrapper();
+        }
+
       )
     ],
   );
