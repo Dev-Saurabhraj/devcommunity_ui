@@ -1,3 +1,4 @@
+import 'package:devcommunity/shared/bottomNavigationBar/appBottomNavigationBar.dart';
 import 'package:devcommunity/utils/icons.dart';
 import 'package:devcommunity/utils/textStyle.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class MainFeedScreen extends StatelessWidget {
       body: Container(
         color: Colors.white,
         child: Padding(
-          padding: const EdgeInsets.all(40),
+          padding: const EdgeInsets.all(20),
           child: Column(
             children: [
               SizedBox(height: 20),
@@ -65,18 +66,21 @@ class MainFeedScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 40),
-                child: FeedProfileCard(),
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 40),
+                  child: FeedProfileCard(),
+                ),
               ),
               Row(
                 mainAxisAlignment: .spaceBetween,
                 children: [
                   _whiteIcon(IconsLibrary.closeSmall),
-                  _redIcon(IconsLibrary.like),
+                  _likeIcon(IconsLibrary.like),
                   _whiteIcon(IconsLibrary.star),
                 ],
               ),
+              AppBottomNavigationBar()
             ],
           ),
         ),
@@ -107,7 +111,7 @@ Widget _whiteIcon(String icon) {
   );
 }
 
-Widget _redIcon(String icon) {
+Widget _likeIcon(String icon) {
   return Container(
     width: 100,
     height: 100,
